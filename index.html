@@ -3,57 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A422联邦共和国总局 - 核心政务网</title>
+    <title>A422联邦共和国总局</title>
     <style>
-        /* 强制重置样式，干掉黑点和间距 */
+        /* 直接内置样式，强制绕过构建失败问题 */
         * { margin: 0; padding: 0; box-sizing: border-box; list-style: none; text-decoration: none; }
-        
-        body {
-            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-            background-color: #f0f4f8;
-            color: #1a365d;
-        }
-
-        /* 顶部深蓝导航 */
-        header {
-            background-color: #1a3a5f;
-            color: white;
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
+        body { font-family: sans-serif; background-color: #f4f7f9; color: #1a365d; }
+        header { background: #1a3a5f; color: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         nav ul { display: flex; gap: 20px; }
-        nav a { color: #cbd5e0; font-weight: bold; font-size: 16px; transition: 0.3s; }
-        nav a:hover, nav a.active { color: #ffffff; border-bottom: 2px solid #ed8936; }
-
-        /* 核心欢迎区 */
-        main { max-width: 1000px; margin: 80px auto; padding: 0 20px; }
-
-        .hero-box {
-            background: linear-gradient(135deg, #1a3a5f 0%, #2c5282 100%);
-            color: white;
-            padding: 100px 40px;
-            text-align: center;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        .hero-box h2 { font-size: 48px; margin-bottom: 20px; letter-spacing: 4px; }
-        .hero-box p { font-size: 20px; opacity: 0.9; margin-bottom: 30px; }
-
-        .status-tag {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: bold;
-            border: 1px solid rgba(255,255,255,0.3);
-        }
-
-        footer { text-align: center; padding: 60px; color: #718096; font-size: 14px; }
+        nav a { color: #cbd5e0; font-weight: bold; }
+        nav a:hover, nav a.active { color: white; border-bottom: 2px solid #ed8936; }
+        main { max-width: 1000px; margin: 80px auto; padding: 0 20px; text-align: center; }
+        .hero { background: linear-gradient(135deg, #1a3a5f 0%, #2c5282 100%); color: white; padding: 100px 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+        .hero h2 { font-size: 3rem; margin-bottom: 20px; }
+        footer { margin-top: 50px; color: #718096; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -68,15 +30,13 @@
             </ul>
         </nav>
     </header>
-
     <main>
-        <section class="hero-box">
+        <section class="hero">
             <h2>公正 · 透明 · 高效</h2>
             <p>数字化行政服务领航者，构建 A422 联邦共和国的美好未来</p>
-            <div class="status-tag">✓ 样式已强制激活 - 2026版本</div>
+            <p style="margin-top:20px; font-size: 0.9rem; color: #ed8936;">部署状态：[ 强制发布模式已激活 ]</p>
         </section>
     </main>
-
-    <footer>&copy; 2026 A422联邦共和国总局 | 数字化政务系统</footer>
+    <footer>&copy; 2026 A422联邦共和国总局</footer>
 </body>
 </html>
