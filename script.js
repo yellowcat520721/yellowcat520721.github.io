@@ -72,4 +72,8 @@ document.getElementById('registerForm')?.addEventListener('submit', async functi
         console.error('注册错误:', error);
         alert('注册失败，请稍后重试');
     }
+// 在注册和登录成功的地方加点小动效
+document.getElementById('loginForm')?.addEventListener('submit', async function(e) {
+    // ... 原有逻辑 ... 
+    console.log("正在尝试登录..."); 
 });
