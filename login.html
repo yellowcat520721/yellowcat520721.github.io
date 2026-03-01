@@ -3,39 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>用户登录</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>安全登录 | A422 联邦共和国总局</title>
+    <style>
+        :root { --primary: #0f172a; --accent: #f59e0b; --text: #1e293b; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Inter", sans-serif; 
+            background: #0f172a; /* 登录页采用深色背景增加安全感 */
+            display: flex; flex-direction: column; min-height: 100vh;
+        }
+        header { 
+            background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
+            padding: 1rem 10%; display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { color: white; font-weight: 800; text-decoration: none; }
+        .logo span { color: var(--accent); }
+        
+        main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .login-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px; border-radius: 24px; width: 100%; max-width: 400px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        h2 { color: var(--primary); margin-bottom: 8px; text-align: center; }
+        p.subtitle { color: #64748b; text-align: center; font-size: 0.9rem; margin-bottom: 30px; }
+        
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-size: 0.85rem; font-weight: 600; color: var(--primary); }
+        input {
+            width: 100%; padding: 12px; border: 1.5px solid #e2e8f0; border-radius: 8px;
+            outline: none; transition: 0.3s;
+        }
+        input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(245,158,11,0.1); }
+        
+        .btn-submit {
+            width: 100%; padding: 12px; background: var(--primary); color: white;
+            border: none; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.3s;
+        }
+        .btn-submit:hover { background: #1e293b; transform: translateY(-1px); }
+        
+        .footer-links { margin-top: 20px; text-align: center; font-size: 0.85rem; }
+        .footer-links a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    </style>
 </head>
 <body>
     <header>
-        <h1>A422联邦共和国总局</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="login.html" class="active">登录</a></li>
-                <li><a href="register.html">注册</a></li>
-            </ul>
-        </nav>
+        <a href="index.html" class="logo">A422<span>FEDERAL</span></a>
     </header>
-
     <main>
-        <section class="auth-form">
-            <h2>用户登录</h2>
-            <form id="loginForm">
+        <div class="login-card">
+            <h2>安全认证</h2>
+            <p class="subtitle">请输入您的联邦公民身份识别码</p>
+            <form>
                 <div class="form-group">
-                    <label for="login-username">用户名</label>
-                    <input type="text" id="login-username" required>
+                    <label>公民 ID / 邮箱</label>
+                    <input type="text" placeholder="输入您的账号">
                 </div>
                 <div class="form-group">
-                    <label for="login-password">密码</label>
-                    <input type="password" id="login-password" required>
+                    <label>访问密钥</label>
+                    <input type="password" placeholder="输入您的密码">
                 </div>
-                <button type="submit">登录</button>
-                <p>没有账号？<a href="register.html">立即注册</a></p>
+                <button type="button" class="btn-submit">授权并进入系统</button>
             </form>
-        </section>
+            <div class="footer-links">
+                没有账号？<a href="register.html">申请入籍</a>
+            </div>
+        </div>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
