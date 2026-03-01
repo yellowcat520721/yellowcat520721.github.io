@@ -1,19 +1,70 @@
-<header>
-    <h1>A422联邦共和国总局</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">首页</a></li>
-            <li><a href="about.html">关于</a></li>
-            <li><a href="services.html">服务</a></li>
-            <li><a href="contact.html">联系</a></li>
-            <li><a href="login.html" class="login-btn">登录</a></li>
-        </ul>
-    </nav>
-</header>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A422联邦共和国总局 - 首页</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #1a3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+        }
+        .hero h2 { font-size: 3rem; margin-bottom: 15px; border: none; color: white; }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: -60px 20px 0;
+        }
+        .stat-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .stat-card b {
+            display: block;
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>A422联邦共和国总局</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="services.html">服务</a></li>
+                <li><a href="contact.html">联系</a></li>
+                <li><a href="login.html" class="login-btn">登录</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-    <section class="hero">
-        <h2>欢迎来到 A422 联邦共和国总局 </h2>
-        <p>构建透明、高效、数字化的行政服务体系 </p>
-    </section>
-</main>
+    <main>
+        <section class="hero">
+            <h2>公正 · 透明 · 高效</h2>
+            <p>构建数字化行政服务体系，服务全体联邦公民</p>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card"><b>24/7</b><span>在线政务受理</span></div>
+            <div class="stat-card"><b>100%</b><span>数据加密安全</span></div>
+            <div class="stat-card"><b>0.3s</b><span>智能审批响应</span></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 A422联邦共和国总局 | 保护公民权利</p>
+    </footer>
+</body>
+</html>
